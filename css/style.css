@@ -1,0 +1,94 @@
+/* NORMALIZACION */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* PALETTE */
+  --primary-solid: #A2345C;
+  --primary-900: rgb(162, 52, 92, 0.9);
+  --primary-500: rgb(162, 52, 92, 0.5);
+  --primary-300: rgb(162, 52, 92, 0.3);
+
+  --secondary-solid: #8E7D5D;
+  --secondary-solid-900: rgb(142, 125, 93, 0.9);
+  --secondary-solid-500: rgb(142, 125, 93, 0.5);
+  --secondary-solid-300: rgb(142, 125, 93, 0.3);
+
+  --light-bg-solid: #F1F1C6;
+
+  --dark-letter-solid: #35312C;
+  --light-letter-solid: #908982;
+
+  /* TYPOGRAPHY */
+  --base-font: 'Inter', 'sans-serif';
+  --alternative-font: 'Raleway', 'sans-serif';
+
+  /* FONT-SIZES */
+  --font-display: 4.6em;
+  --font-large: 3em;
+  --font-medium: 2em;
+  --font-small: 1.2em;
+
+  /* FONT-WEIGHT */
+  --font-w-height: 500;
+  --font-w-medium: 400;
+  --font-w-low: 200;
+
+  /* SPACINGS */
+
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--base-font);
+  font-size: 62.5%; 
+  color: var(--dark-letter-solid);
+  background-color: var(--light-bg-solid);
+}
+/* 62.5% EL TAMAÑO POR DEFECTO ES 16PX
+ES BUENA PRACTICA USAR UNIDADDES REM Y EM(PARA LOS TEXTOS)
+1 EM ES IGUAL A 16PX PARA QUE:
+1 EM = 10PX DEPENDIENDO ALGUNAS SITUACIONES PUEDE VARIAR SU TAMAÑO 
+1 REM = 10PX NO CAMBIA NI VARIA SU TAMAÑO 
+*/
+
+body {
+  background-color: inherit;
+}
+
+header, footer {
+  font-family: var(--alternative-font);
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  font-size: var(--font-medium);
+  color: inherit;   /* QUE TOME EL HEREDADO */
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+p {
+  font-size: var(--font-medium);
+  font-weight: var(--font-w-medium);
+}
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--font-w-height);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
