@@ -3,15 +3,15 @@
 
 :root {
   /* PALETTE */
-  --primary-solid: #A2345C;
-  --primary-900: rgb(162, 52, 92, 0.9);
-  --primary-500: rgb(162, 52, 92, 0.5);
-  --primary-300: rgb(162, 52, 92, 0.3);
+  --primary-solid: #973150;
+  --primary-900: rgb(151, 49, 80, 0.9);
+  --primary-500: rgb(151, 49, 80, 0.5);
+  --primary-300: rgb(151, 49, 80, 0.3);
 
-  --primary-solid-2: #d02765;
-  --primary-solid-2-900: rgb(208, 39, 101, 0.9);
-  --primary-solid-2-500: rgb(208, 39, 101, 0.5);
-  --primary-solid-2-300: rgb(208, 39, 101, 0.3);
+  --primary-solid-2: #DF3F8C;
+  --primary-solid-2-900: rgba(208, 39, 101, 0.9);
+  --primary-solid-2-500: rgba(208, 39, 101, 0.5);
+  --primary-solid-2-300: rgba(208, 39, 101, 0.3);
 
   --secondary-solid: #8E7D5D;
   --secondary-solid-900: rgb(142, 125, 93, 0.9);
@@ -115,15 +115,16 @@ h1 {
   width: 45rem;
   height: 65rem;
   background-color: var(--white-bg-solid);
-  border-radius: 5rem;
+  border-radius: 5.6rem;
   box-shadow: 0rem 0rem 4rem 1.5rem var(--secondary-solid-500);
 }
 
 .card-header {
+  position: relative;
   border-radius: inherit;
   width: 100%;
   height: 25rem;
-  background-color: var(--primary-solid);
+  /* background-color: var(--primary-solid); */
   display: flex;
   justify-content: center;
 }
@@ -133,6 +134,7 @@ h1 {
   height: 15rem;
   border-radius: 50%;
   margin-top: 2rem;
+  z-index: 1;
 }
 
 .card-header img {
@@ -141,6 +143,14 @@ h1 {
   height: 100%;
   object-fit: cover;
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
 }
 
 .card-body {
@@ -178,31 +188,23 @@ h1 {
 
 button {
   cursor: pointer;
-  color: var(--white-bg-solid);
-  background-color: inherit;
+  color: var(--secondary-solid);
+  background-color: var(--white-bg-solid);
+  border: 2px solid var(--secondary-solid-500);
   font-size: var(--font-small);
   border-radius: 5rem;
   height: 5.5rem;
   width: 16rem;
-  border: 0 solid white;
 }
 
-button.follow {
+.button-active {
   background-color: var(--primary-solid-2);
-}
-
-button.follow:hover {
-  background-color: var(--primary-solid-2-900);
-}
-
-button.message {
-  background-color: var(--white-bg-solid);
-  border: 2px solid var(--secondary-solid-500);
-  color: var(--secondary-solid);
-}
-
-button.message:hover {
-  background-color: var(--secondary-solid-500);
-  border: 0px solid var(--secondary-solid-500);
   color: var(--white-bg-solid);
+  border: 0px solid var(--primary-solid-2);
+}
+
+button:hover {
+  background-color: var(--primary-solid-2);
+  color: var(--white-bg-solid);
+  border: 0px solid var(--primary-solid-2);
 }
